@@ -64,6 +64,14 @@ export class CustomerComponent implements OnInit {
       notification: 'email',
       rating:[null,[Validators.required,ratingRange(1,5)]],
       sendCatalog: true,
+      addresses:this.fb.group({
+        addressType: 'home',
+        street1: ['', Validators.required],
+        street2: '',
+        city: '',
+        state: '',
+        zip: ''
+      })
       //lastName:{value:'n/a',disabled:true},
     })
 
